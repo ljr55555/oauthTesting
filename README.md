@@ -48,6 +48,7 @@ TLS_VERIFY = True
 
 ```bash
 python getJWTInfo.py
+# Or 
 python getUserInfo.py
 ```
 
