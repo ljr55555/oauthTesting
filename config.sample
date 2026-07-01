@@ -1,0 +1,24 @@
+# OAuth client configuration shared by test scripts
+OAUTH_CLIENT_ID = "REPLACE_WITH_CLIENT_ID"
+OAUTH_CLIENT_SECRET = "REPLACE_WITH_CLIENT_SECRET"
+
+# Base PingFederate runtime URL.
+# Used by the UserInfo script to build:
+#   https://<base>/.well-known/openid-configuration
+OAUTH_URL_BASE = "https://login.example.com"
+
+# Direct endpoints used by the JWT inspection script.
+OAUTH_AUTHORIZE_URL = "https://login.example.com/as/authorization.oauth2"
+OAUTH_TOKEN_URL = "https://login.example.com/as/token.oauth2"
+
+# Redirect path handled by Flask.
+REDIRECT_URI = "/oauth2/v1/authorize/callback"
+
+# Full redirect URI registered on the OAuth client in PingFederate.
+REDIRECT_URL = "https://your-test-host.example.com/oauth2/v1/authorize/callback"
+
+# TLS verification behavior.
+# True = verify using system trust store
+# False = disable verification for testing only
+# or set to a CA bundle path
+TLS_VERIFY = True
